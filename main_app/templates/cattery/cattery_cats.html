@@ -1,0 +1,11 @@
+{% extends "cattery/cattery_base.html" %}
+
+{% block "contents" %}
+    <div class="cats panel panel-default">
+        {% for cat in cats %}
+
+            {% include "components/cattery_cat_panel.html" %}
+
+        {% endfor%}
+    </div>
+{% endblock %}

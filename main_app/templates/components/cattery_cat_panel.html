@@ -1,0 +1,58 @@
+{% load staticfiles %}
+{% load social_share %}
+
+<div class="panel-heading">
+    <h3 class="panel-title">{{cat.name}}</h3>
+</div>
+<div class="panel-body">
+    <div class="cat-photo">
+        {% if cat.image %}
+        <img src="{{ cat.image.url }}" height="200">
+        {% endif %}
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                <img src="{% static 'images/gender-icon2.png' %}" height="20">
+                Gender:
+            </th>
+            <td>{{cat.gender}}</td>
+        </tr>
+        <tr>
+            <th>
+                <img src="{% static 'images/age-icon.png' %}" height="20">
+                Age:
+            </th>
+            <td>{{cat.age}}</td>
+        </tr>
+        <tr>
+            <th>
+                <img src="{% static 'images/color-icon.png' %}" height="20">
+                Color:
+            </th>
+            <td>{{cat.color}}</td>
+        </tr>
+        <tr>
+            <th>
+                <img src="{% static 'images/code-icon.png' %}" height="20">
+                Code FIFE:
+            </th>
+            <td>{{cat.code}}</td>
+        </tr>
+        <tr>
+            <th>
+                <img src="{% static 'images/fur-icon.png' %}" height="20">
+                Type of fur:
+            </th>
+            <td>{{cat.fur}}</td>
+        </tr>
+        <tr>
+            <th>
+                <img src="{% static 'images/tree-icon.png' %}" height="20">
+                Cats relationship:
+            </th>
+            <td>{{cat.litter}}</td>
+        </tr>
+    </table>
+</div>
