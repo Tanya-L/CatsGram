@@ -6,4 +6,20 @@
         {% include "components/cattery_cat_panel.html" %}
 
     </div>
+
+    <div>
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="cat_name_input"> Update cat information: </label><br>
+            <input id="cat_name_input" type="text"  name="cat_name" value="{{ cat.name }}"><br>
+            <input id="cat_gender_input" type="text" name="cat_gender" value="{{ cat.gender }}"><br>
+            <input id="cat_age_input" type="text" name="cat_age" value="{{ cat.age }}"><br>
+            <input id="cat_color_input" type="text" name="cat_color" value="{{ cat.color }}"><br>
+            <input id="cat_code_input" type="text" name="cat_code" value="{{ cat.code }}"><br>
+            <input id="cat_fur_input" type="text" name="cat_fur" value="{{ cat.fur }}"><br>
+            <br>
+            <input id= "btnK" type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </div>
 {% endblock %}
